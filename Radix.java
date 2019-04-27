@@ -4,6 +4,16 @@ import java.util.*;
 public class Radix{
 
 
+static int getMax(int arr[], int n) {
+        int mx = arr[0];
+        for (int i = 1; i < n; i++){
+                if (arr[i] > mx){
+                        mx = arr[i];
+                }
+        }
+        return mx;
+    }
+
 static void countSort(int arr[], int n, int exp) {
         int output[] = new int[n]; // output array
         int i;
