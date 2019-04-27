@@ -4,7 +4,8 @@ import java.util.*;
 public class Radix{
 
 
-static int getMax(int[] arr, int n) {
+static int getMax(int[] arr) {
+        int n = arr.length;
         int largo = arr[0];
         for (int x = 1; x < n; x++){
                 if (arr[x] > largo){
@@ -13,6 +14,12 @@ static int getMax(int[] arr, int n) {
         }
         return largo;
     }
+
+
+public static void radixsort(int[] data){
+        int bigdig = getMax(data);
+
+}
 
 static void countSort(int arr[], int n, int exp) {
         int output[] = new int[n]; // output array
