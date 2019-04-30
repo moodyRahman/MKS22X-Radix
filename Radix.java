@@ -19,6 +19,10 @@ static int getMax(int[] arr) {
 public static void radixsort(int[] data){
         int bigdig = getMax(data);
 
+        for (int power = 1; bigdig/power > 0; power = power * 10){
+                countSort(data, data.length, power);
+        }
+
 }
 
 static void countSort(int arr[], int n, int exp) {
